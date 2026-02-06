@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Pentru Iubirea Mea ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="hero">
+    <h1>La mulți ani de Valentine’s Day, iubirea mea ❤️</h1>
+
+    <p>
+        De când ai apărut în viața mea, totul are mai mult sens. 
+        Zilele mele sunt mai luminoase, grijile par mai mici, iar 
+        fiecare clipă petrecută cu tine devine o amintire pe care o păstrez 
+        cu drag în suflet.
+    </p>
+
+    <p>
+        Îmi place felul în care râzi, felul în care mă privești,
+        felul în care știi să mă liniștești fără să spui prea multe cuvinte.
+        Cu tine am învățat ce înseamnă cu adevărat iubirea — sinceră, caldă,
+        profundă și reală.
+    </p>
+
+    <a href="surprise.html" class="btn">Descoperă surpriza noastră 💖</a>
+</section>
+
+<script>
+function createHearts() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}
+setInterval(createHearts, 300);
+</script>
+
+</body>
+</html>

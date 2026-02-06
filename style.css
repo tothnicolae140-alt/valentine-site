@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff4e50, #ff9a9e);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.hero, .surprise {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Butoane */
+.btn, .valentine-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.btn {
+    background: white;
+    color: #ff4e50;
+}
+
+.valentine-btn {
+    background: #fff;
+    color: #ff4e50;
+    border: none;
+}
+
+.btn:hover, .valentine-btn:hover {
+    transform: scale(1.1);
+    background: #ff4e50;
+    color: white;
+}
+
+/* Galerie modernă */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 15px;
+    transform: translateY(100%);
+    transition: 0.4s;
+}
+
+.card:hover .overlay {
+    transform: translateY(0);
+}
+
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+}
+
+/* Inimi plutitoare */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    width: 20px;
+    height: 20px;
+    background: red;
+    transform: rotate(45deg);
+    animation: float 6s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+}
+
+.heart::before { top: -10px; left: 0; }
+.heart::after { left: -10px; top: 0; }
+
+@keyframes float {
+    to {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}

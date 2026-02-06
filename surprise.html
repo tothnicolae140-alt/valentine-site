@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Momentele Noastre ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="surprise">
+
+    <h1>O poveste scrisă în doi 💕</h1>
+
+    <p>
+        Fiecare fotografie spune o poveste. Fiecare zâmbet surprins
+        aici ascunde o emoție, o glumă, un moment pe care l-am trăit
+        împreună. Nu sunt doar poze — sunt bucăți din noi.
+    </p>
+
+    <p>
+        Sunt recunoscător pentru fiecare zi în care te am lângă mine.
+        Pentru fiecare îmbrățișare, pentru fiecare conversație târzie,
+        pentru fiecare vis pe care îl construim împreună.
+    </p>
+
+    <h2>Momentele noastre speciale 📸</h2>
+
+    <div class="gallery">
+        <div class="card">
+            <img src="e:\Poze\hdhdg.jpeg" onclick="openLightbox(this)">
+            <div class="overlay">Un moment de neuitat ❤️</div>
+        </div>
+
+        <div class="card">
+            <img src="e:\Poze\gygyggy.jpeg" onclick="openLightbox(this)">
+            <div class="overlay">Zâmbetul tău preferat 💕</div>
+        </div>
+
+        <div class="card">
+            <img src="e:\Poze\hghghgghhg.jpeg" onclick="openLightbox(this)">
+            <div class="overlay">Fericire pură ✨</div>
+        </div>
+
+        <div class="card">
+            <img src="e:\Poze\hhkjhkjhjk.jpeg" onclick="openLightbox(this)">
+            <div class="overlay">Împreună mereu 💖</div>
+        </div>
+
+        <div class="card">
+            <img src="e:\Poze\jhskghsdjsldkjshdfgl.jpeg" onclick="openLightbox(this)">
+            <div class="overlay">Povestea noastră 🌹</div>
+        </div>
+
+        <div class="card">
+            <img src="e:\Poze\hy.jpeg" onclick="openLightbox(this)">
+            <div class="overlay">Un moment de neuitat ❤️</div>
+        </div>
+    </div>
+
+    <button class="valentine-btn" onclick="bigLove()">💍 Vrei să fii pentru totdeauna Valentine-ul meu?</button>
+
+    <h2 class="love" id="finalMessage"></h2>
+
+    <a href="index.html" class="btn">Înapoi</a>
+
+</section>
+
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(img) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = img.src;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function bigLove() {
+    document.getElementById("finalMessage").innerHTML =
+    "Promit să te aleg în fiecare zi. Te iubesc infinit ❤️";
+    document.getElementById("finalMessage").style.animation = "pulse 1s infinite";
+}
+</script>
+
+</body>
+</html>
